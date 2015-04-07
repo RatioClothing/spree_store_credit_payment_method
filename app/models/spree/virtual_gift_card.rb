@@ -38,7 +38,7 @@ class Spree::VirtualGiftCard < ActiveRecord::Base
   end
 
   def formatted_redemption_code
-    redemption_code.scan(/.{4}/).join('-')
+    redemption_code.scan(/.{1,4}/).join('-')
   end
 
   def formatted_amount
